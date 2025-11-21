@@ -1,5 +1,7 @@
 package com.example.travelapp.data.remote.dto
 
+import com.google.gson.annotations.SerializedName
+
 data class CountryDto (
     val name: Name,
     val flag: Flags?,
@@ -10,7 +12,9 @@ data class CountryDto (
     val continent: String,
     val region: String,
     val subregion: String?,
-    val population: Long
+    val population: Long,
+    @SerializedName("cca2")
+    val countryCode:String,
 )
 
 data class Name(
