@@ -1,7 +1,7 @@
 package com.example.travelapp.domain.model
 
 data class Destination (
-    val id: String,
+    val countryCode: String,
     val name: String,
     val capital: String,
     val region: String,

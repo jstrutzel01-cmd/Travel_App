@@ -4,15 +4,14 @@ import com.google.gson.annotations.SerializedName
 
 data class CountryDto (
     val name: Name,
-    val flag: Flags?,
+    val flags: Flags?,
     val maps: Maps?,
-    val currencies: Currency?,
-    val capital: String,
-    val language: Map<String, String>?,
-    val continent: String,
-    val region: String,
+    val currencies: Map<String, Currency>?,
+    val capital: List<String>?,
+    val languages: Map<String, String>?,
+    val region: String?,
     val subregion: String?,
-    val population: Long,
+    val population: Long?,
     @SerializedName("cca2")
     val countryCode:String,
 )
@@ -23,14 +22,14 @@ data class Name(
 )
 
 data class Flags(
-    val png: String,
-    val svg: String,
-    val alt: String
+    val png: String?,
+    val svg: String?,
+    val alt: String?
 )
 
 data class Maps(
-    val googleMaps: String,
-    val openStreetMaps: String
+    val googleMaps: String?,
+    val openStreetMaps: String?
 )
 
 data class Currency(
