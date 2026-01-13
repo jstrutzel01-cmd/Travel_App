@@ -41,12 +41,12 @@ fun HomeScreen(
             )
         )
     ),
-    modifier: Modifier
+    modifier: Modifier = Modifier
 ) {
     val uiState = viewModel.uiState.collectAsStateWithLifecycle()
     val searchQuery = viewModel.searchQuery.collectAsStateWithLifecycle()
 
-    Column(modifier = modifier
+    Column(modifier = Modifier
         .fillMaxSize()
         .padding(16.dp)
     ) {

@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.travelapp.ui.screens.home.HomeScreen
+import com.example.travelapp.ui.screens.saved.SavedScreen
 
 @Composable
 fun NavGraph(
@@ -20,6 +21,9 @@ fun NavGraph(
     ) {
         composable(route = Screen.Home.route) {
             HomeScreen(modifier = modifier)
+        }
+        composable(route = Screen.Saved.route) {
+            SavedScreen(modifier = modifier)
         }
 
     }

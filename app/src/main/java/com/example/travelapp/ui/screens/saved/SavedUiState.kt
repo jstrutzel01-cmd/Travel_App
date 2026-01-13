@@ -4,12 +4,12 @@ import com.example.travelapp.domain.model.Destination
 
 sealed class SavedUiState {
 
-    data object Initial: SavedUiState()
+    data object Empty: SavedUiState()
 
     data object Loading: SavedUiState()
 
     data class Success (
-        val savedDestinations : List<Destination>
+        val destinations : List<Destination>
     ) : SavedUiState()
 
     data class Error (
